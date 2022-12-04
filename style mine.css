@@ -65,7 +65,8 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: calc(15px + 0.390625vw);
+  /* font-size: calc(15px + 0.390625vw); */
+  font-size: 1rem
 }
 
 body {
@@ -97,7 +98,8 @@ a {
 }
 
 img {
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
+  width: 100%;
 }
 
 ul {
@@ -135,7 +137,17 @@ timeline-homepage {
   height: 1rem;
   border-right: 0.2em solid lightgray;
   border-top: 0.2em solid lightgray;
-  /* transform: rotate(135deg); */
+  transform: rotate(135deg);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: var(--very-black);
+}
+
+div {
+display: flex;
+justify-content: center;
 }
 
 timeline-left-column {
@@ -239,13 +251,33 @@ timeline-highlights::before {
 
 timeline-text {
   display: block;
-  line-height: 150%;
+  line-height: 200%;
 }
 
 timeline-text a::after {
   content: ">>";
 }
 
+
+/* Centered text */
+.centered {
+  /* background: rgba(0, 0, 0, 0.5); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.1rem; 
+  /* font-size: calc(15px + 2vw); */
+  transform: translate(-50%, -50%);
+  display: block;
+  line-height: 200%;
+}
+
+/* Top left text */
+.top-left {
+  position: relative;
+  top: 8px;
+  left: 16px;
+}
 .splide {
   max-width: 100%;
   margin-left: auto;
@@ -258,7 +290,7 @@ timeline-text a::after {
   object-fit: cover;
 }
 
-/* DESKTOP */
+/* DESKTOP
 
 @media only screen and (min-width: 768px) {
   timeline-title {
@@ -312,4 +344,4 @@ timeline-text a::after {
 
   timeline-right-div * {
   }
-}
+} */
