@@ -98,8 +98,8 @@ a {
 }
 
 img {
-  /* border-radius: 2rem; */
-  width: 100%;
+  border-radius: 2rem;
+  /* width: 100%; */
 }
 
 ul {

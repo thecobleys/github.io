@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="splide/splide.min.css" />
 </head>
 
-<body onresize="fittext(carousel0)">
+<body onresize="fittext(centred_text)">
   <script src="index.js"></script>
   <script src="splide/splide.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -23,13 +23,13 @@
     <div id="carousel0">
       <img style="width:100%;" src="img/santa_vertical.jpg" />
       <timeline-text>
-        <div class="centered">Hello friend. Congratulations on finding your way to our Christmas website. 
+        <div id= 'centred_text' class="centered">Hello friend. Congratulations on finding your way to our Christmas website. 
           We were inspired by the fact that our stamps now have bar codes, so we decided to 
           create our own barcode-accessed website. <br>
           If you are viewing this page, you are not seeing your personal message from Dan and Zella. 
           But we wish you a generically lovely Christmas nonetheless! <br>
-          <a>See more below</a>
-      </timeline-text>
+          <a href="#timeline-section1" class="Arrow"></a>
+        </timeline-text>
     </div>
 
     </div>

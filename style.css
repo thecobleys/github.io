@@ -249,7 +249,7 @@ timeline-text {
 }
 
 timeline-text a::after {
-  content: ">>";
+  /* content: ">>"; */
 }
 
 
