@@ -1,0 +1,338 @@
+@font-face {
+  font-family: "space-grotesk";
+  src: url("fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "space-grotesk-bold";
+  src: url("fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "space-mono";
+  src: url("fonts/SpaceMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "space-mono-bold";
+  src: url("fonts/SpaceMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "space-mono-italic";
+  src: url("fonts/SpaceMono-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "space-mono-bold-italic";
+  src: url("fonts/SpaceMono-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "hyperlegible";
+  src: url("fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "hyperlegible-italic";
+  src: url("fonts/AtkinsonHyperlegible.ttf-Italic") format("truetype");
+}
+
+@font-face {
+  font-family: "hyperlegible-bold";
+  src: url("fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "hyperlegible-bold-italic";
+  src: url("fonts/AtkinsonHyperlegible-BoldItalic.ttf") format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+:root {
+  --international-orange: #ff4f00;
+  --dodger-blue: #0197f6;
+  --space-cadet: #2b2d42;
+  --maximum-yellow: #f8f32b;
+  --very-white: #ffffff;
+  --very-black: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(15px + 0.390625vw);
+}
+
+body {
+  font-family: "hyperlegible", sans-serif;
+  background: var(--very-white);
+  animation: fadeInAnimation ease 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+::selection {
+  background-color: var(--international-orange);
+  color: var(--very-white);
+}
+
+a {
+  font-family: "space-mono", monospace;
+  color: var(--international-orange);
+  text-decoration: underline;
+}
+
+img {
+  /* border-radius: 2rem; */
+}
+
+ul {
+  margin-left: 2rem;
+}
+
+timeline-section {
+  display: block;
+  position: relative;
+  contain: content;
+  margin-bottom: 3rem;
+  width: min(90vw, 1200px);
+  margin: auto;
+  /* font-size: 0; */
+}
+
+timeline-me img {
+  height: 4rem;
+  border-radius: 50%;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+timeline-homepage {
+  display: block;
+  font-family: "space-grotesk", sans-serif;
+}
+
+.Arrow {
+  position: relative;
+  top: 2rem;
+  left: 45%;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-right: 0.2em solid lightgray;
+  border-top: 0.2em solid lightgray;
+  transform: rotate(135deg);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: var(--very-black);
+}
+
+
+timeline-left-column {
+  display: block;
+}
+
+timeline-left-div {
+  display: block;
+  /* font-size: 1rem; */
+  margin-bottom: 2rem;
+}
+
+timeline-left-div * {
+  margin-bottom: 0.5rem;
+}
+
+timeline-left-div ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+timeline-right-column {
+  display: block;
+}
+
+timeline-right-div {
+  display: block;
+  /* font-size: 1rem; */
+  margin-bottom: 2rem;
+}
+
+timeline-right-div * {
+  margin-bottom: 2rem;
+}
+
+timeline-theme {
+  display: block;
+  font-family: "space-mono-bold", monospace;
+}
+
+timeline-title {
+  display: none;
+  font-family: "space-mono-bold", monospace;
+  color: var(--international-orange);
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+timeline-short-title {
+  display: block;
+  font-family: "space-mono-bold", monospace;
+  color: var(--international-orange);
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+
+timeline-date {
+  display: block;
+  font-family: "space-mono-bold", monospace;
+  font-size: 2rem;
+}
+
+timeline-subtitle {
+  display: block;
+  font-size: 1.3rem;
+  font-family: "space-grotesk-bold", sans-serif;
+}
+
+timeline-duration {
+  display: block;
+  font-family: "space-grotesk-bold", sans-serif;
+}
+
+timeline-location {
+  display: block;
+  font-family: "space-grotesk-bold", sans-serif;
+}
+
+timeline-location::before {
+  content: "@ ";
+}
+
+timeline-thanks {
+  display: block;
+  font-family: "space-grotesk-bold", monospace;
+}
+
+timeline-thanks::before {
+  content: "With thanks to ";
+}
+
+timeline-highlights {
+  font-family: "hyperlegible", sans-serif;
+  display: block;
+}
+
+timeline-highlights::before {
+  font-family: "space-grotesk-bold", sans-serif;
+  content: "Highlights:";
+}
+
+timeline-text {
+  display: block;
+  line-height: 200%;
+}
+
+timeline-text a::after {
+  content: ">>";
+}
+
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* font-size: 2rem;  */
+  font-size: calc(15px + 2vw);
+  transform: translate(-50%, -50%);
+}
+
+/* Top left text */
+.top-left {
+  position: relative;
+  top: 8px;
+  left: 16px;
+}
+.splide {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  timeline-title {
+    display: block;
+    font-size: 3.5rem;
+  }
+
+  timeline-short-title {
+    display: none;
+    font-size: 3.5rem;
+  }
+
+  timeline-homepage {
+    display: block;
+    font-size: 1.4rem;
+  }
+
+  timeline-date {
+    display: block;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  timeline-left-column {
+    display: block;
+    width: 25%;
+    height: 100%;
+  }
+
+  timeline-left-div {
+    margin-bottom: 1rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  timeline-left-div * {
+  }
+
+  timeline-right-column {
+    display: block;
+    width: 65%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+  }
+
+  timeline-right-div {
+  }
+
+  timeline-right-div * {
+  }
+}
