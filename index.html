@@ -10,17 +10,18 @@
   <link rel="stylesheet" href="splide/splide.min.css" />
 </head>
 
-<body>
+<body onresize="fittext(carousel0)">
   <script src="index.js"></script>
   <script src="splide/splide.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="js/fittext.js"></script>
 
   <timeline-section id="timeline-section0">
 
 
     <timeline-title>Happy Christmas</timeline-title>
     <div id="carousel0">
-      <img src="img/santa_vertical.jpg" />
+      <img style="width:100%;" src="img/santa_vertical.jpg" />
       <timeline-text>
         <div class="centered">Hello friend. Congratulations on finding your way to our Christmas website. 
           We were inspired by the fact that our stamps now have bar codes, so we decided to 
