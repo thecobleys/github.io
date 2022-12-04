@@ -1,6 +1,6 @@
 <?php
 $row = 1;
-$target = '20';
+$target = 'ESOU';
 
 $headerHtml = '<!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@ $headerHtml = '<!DOCTYPE html>
         <img src="../img/santa_vertical.jpg" />
         <timeline-text>
         <div class="centered">Dear ';
-$midHtml = '  , congratulations on making it through the bar code hurdle!       <a>See more below</a>
+$midHtml = ', congratulations on making it through the bar code hurdle!       <a>See more below</a>
 </timeline-text>
 </div>
 
@@ -55,18 +55,20 @@ $endHtml = '        </timeline-text>
 
 $articleHtml = $headerHtml;
 
-if (($handle = fopen("/Users/zellaking/Desktop/test.csv", "r")) !== FALSE) {
+if (($handle = fopen("/Users/zellaking/Downloads/Christmas card list 2022.xlsx - Royal_Mail.csv", "r")) !== FALSE) {
+    echo "File is readable";
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
+        echo $data[13];
         // echo "<p> $num fields in line $row: <br /></p>\n";
         $row++;
-        if ($data[11] == $target) {
+        if ($data[12] == $target) {
             echo "<h1> Happy Christmas $data[1] <br /></h1>\n";
             $articleHtml .= $data[1].
             $midHtml.$data[12].$endHtml;
 
             // $filename = $data[11].'.txt';
-            $dir = $data[11];
+            $dir = $data[12];
 
             if ( !file_exists($dir) ) {
                 mkdir ($dir, 0744);
@@ -106,6 +108,8 @@ if (($handle = fopen("/Users/zellaking/Desktop/test.csv", "r")) !== FALSE) {
         //}
     }
     fclose($handle);
+} else {
+    echo "The file is not readable";
 }
 
 
