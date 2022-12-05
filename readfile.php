@@ -4,44 +4,53 @@ $target = 'KGGX';
 
 $headerHtml = '<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Happy Christmas from Dan and Zella</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="splide/splide.min.css" />
-  </head>
-  <body>
-    <script src="index.js"></script>
-    <script src="splide/splide.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Happy Christmas from Dan and Zella</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="splide/splide.min.css" />
+</head>
 
-    <timeline-section id="time§§line-section0">
+<body onresize="fittext(centred_text)">
+<script src="index.js"></script>
+<script src="splide/splide.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="js/fittext.js"></script>
+
+<timeline-section id="timeline-section0">
 
 
-      <timeline-title>Happy Christmas</timeline-title>
-      <div id="carousel0" >
-        <img src="img/santa_vertical.jpg" />
-        <timeline-text>
-        <div class="centered">Dear ';
-$midHtml = ', congratulations on making it through the bar code hurdle! <br>            <a href="#timeline-section1" class="Arrow"></a>
+  <timeline-title>Happy Christmas</timeline-title>
+  <div id="carousel0">
+    <img style="width:100%;" src="img/santa_vertical.jpg" />
+    <timeline-text>
+      <div id= "centred_text" class="centered">Dear ';
+$midHtml = ', congratulations on making it through the bar code hurdle! <br>            
+<a href="#timeline-section1" class="Arrow"></a>
+        </timeline-text>
+    </div>
 
-</timeline-text>
-</timeline-section>
-<timeline-section id="timeline-section1">
-<timeline-homepage id="timeline-column0">
-<timeline-me
-  ><a
-    href="https://thecobleys.github.io"
-    target="_blank"
-    rel="noopener noreferrer"
-    ><img src="img/dan_zell_Westminster.jpg" /></a
-></timeline-me>
-<timeline-text>
+    </div>
+
+
+
+  </timeline-section>
+  <timeline-section id="timeline-section1">
+    <timeline-homepage id="timeline-column0">
+      <timeline-me><a href="https://thecobleys.github.io" target="_blank" rel="noopener noreferrer"><img
+            src="img/dan_zell_Westminster.jpg" /></a></timeline-me>
+      <timeline-text>
+        <div >
 ';
 
-$endHtml = '        </timeline-text>
+$endHtml = '</div>
+
+
+        
+
+</timeline-text>
 </timeline-homepage>
 </timeline-section>
 
@@ -49,23 +58,24 @@ $endHtml = '        </timeline-text>
 </html>';
 
 
-$articleHtml = $headerHtml;
-
 if (($handle = fopen("/Users/zellaking/Downloads/Christmas card list 2022.xlsx - Royal_Mail.csv", "r")) !== FALSE) {
     echo "File is readable";
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
         $num = count($data);
         // echo "<p> $num fields in line $row: <br /></p>\n";
         $row++;
-        if ($data[12] == $target) {
-            echo "<h1> Happy Christmas $data[1] <br /></h1>\n";
-            $articleHtml .= trim($data[1]).
-            $midHtml.trim($data[15]).$endHtml;
+        print($data[13]);
+        $articleHtml = $headerHtml;
+        if ($data[13] != '' & $data[13] != 'Code') {
+            echo "<$data[13]\n";
+            $articleHtml .= trim($data[15]).
+            $midHtml.trim($data[16]).$endHtml;
 
             // PHP needs permission to write to folder
             // Therefore let PHP attempt to create the folder
+            // This will grant the permission 
 
-            $filename = $data[12].'.html';
+            $filename = $data[13].'.html';
             $dir = '/Users/zellaking/Repos/thecobleys.github.io';
 
             if ( !file_exists($dir) ) {
