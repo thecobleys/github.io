@@ -1,8 +1,10 @@
 function fitText(outputSelector){
+
+	console.log('inside function')
 	// max font size in pixels
 	const maxFontSize = 50;
 	// get the DOM output element by its selector
-	let outputDiv = document.getElementById(centred_text);
+	let outputDiv = document.getElementById(outputSelector);
 	// get element's width
 	let width = outputDiv.clientWidth;
 	// get content's width

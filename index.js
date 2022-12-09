@@ -32,7 +32,7 @@ $("section").each(function (index) {
   });
 });
 
-function fitText(outputSelector){
+document.addEventListener("DOMContentLoaded", function fitText(){
   // max font size in pixels
   const maxFontSize = 50;
   // get the DOM output element by its selector
@@ -62,4 +62,4 @@ function fitText(outputSelector){
           }
       }
   }
-}
+})
