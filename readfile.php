@@ -48,7 +48,7 @@ $midHtml = '</p>
 
 $endHtml = '</p>
 </div>
-<a href="#timeline-section1" class="Arrow"></a>
+<a href="#timeline-section2" class="Arrow"></a>
 
 
 
@@ -80,7 +80,7 @@ As Dan, Zell and Santa had planned! </p>
 
 <div>
 <footer class = "footer-basic">
-<p>Artwork and limerick by Dan | Web design by <a href="bencobley.com">Ben</a> | Web build by Zella</p>
+<p>Artwork and limerick by Dan | Web design by <a href="bencobley.com">Ben</a> | Web build by Zella and Tom</p>
 </footer>
 </div>
 
