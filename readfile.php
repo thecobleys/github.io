@@ -66,7 +66,7 @@ $endHtml = '</p>
 A Christmas card barcode was scanned </p><p>
 It shared good festive cheer </p><p>
 And a happy new year</p><p>
-As Dan and as Zella had planned! </p>
+As Dan, Zell and Santa had planned! </p>
   <a href="#timeline-section1" class="Arrow"></a>
 </timeline-text>
 
