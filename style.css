@@ -74,6 +74,8 @@ body {
   animation: fadeInAnimation ease 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  margin: 0px;
+  height: 100%;
 }
 
 @keyframes fadeInAnimation {
@@ -111,6 +113,8 @@ timeline-section {
   margin-bottom: 3rem;
   width: min(90vw, 1200px);
   margin: auto;
+  /* margin: 0px; */
+  height: 100vh;
   /* font-size: 0; */
 }
 
