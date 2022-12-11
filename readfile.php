@@ -44,7 +44,7 @@ $midHtml = '</p>
 
 
 </timeline-section>
-<timeline-section id="timeline-section1" style = "height: 100vw" >
+<timeline-section id="timeline-section1" >
 <!-- <timeline-homepage id="timeline-column0"> -->
 <timeline-me><a href="https://thecobleys.github.io" target="_blank" rel="noopener noreferrer"><img
   src="img/dan_zell_Westminster.jpg" /></a>

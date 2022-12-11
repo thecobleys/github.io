@@ -137,6 +137,7 @@ timeline-homepage {
   display: inline-block;
   width: 1rem;
   height: 1rem;
+  font-size: 6vw;
   border-right: 0.2em solid rgb(48,148,79);
   border-top: 0.2em solid rgb(48,148,79);
   transform: rotate(135deg);
@@ -257,17 +258,21 @@ timeline-text a::after {
   /* content: ">>"; */
 }
 
-p {margin-bottom:0.5em}
+p {
+  margin-bottom:0.5em;
+  display: block}
 
 
 /* Centered text */
 .centered {
   position: absolute;
-  top: 30%;
-  left: 50%;
+  top: 60px;
+  left: 60px;
+  /* top: 50%; */
+  /* left: 50%; */
   /* font-size: 2rem;  */
   /* font-size: calc(15px + 1vw); */
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -80%); */
   
 }
 
