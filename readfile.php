@@ -89,7 +89,7 @@ As Dan, Zell and Santa had planned! </p>
 <div>';
 $footerHTML = '
 <footer class = "footer-basic" id="footer">
-<p>Artwork by Dan | Web design by <a href="bencobley.com">Ben</a> | Web build by Zella and Tom</p>
+<p>Artwork and postcard by Dan | Web design by <a href="bencobley.com">Ben</a> | Web build by Zella and Tom</p>
 </footer>
 </div>
 </html>';
@@ -98,7 +98,7 @@ $footerHTMLwithphotos = '
 <footer class = "footer-basic" id="footer">
 <p> Some photos of our year are <a href="https://photos.app.goo.gl/bRdEwLxDMwxv8vNA6">here</a></p>
 
-<p>Artwork by Dan | Web design by <a href="bencobley.com">Ben</a> | Web build by Zella and Tom</p>
+<p>Artwork and postcard by Dan | Web design by <a href="bencobley.com">Ben</a> | Web development by Zella and Tom</p>
 </footer>
 </div>
 </html>';
