@@ -84,9 +84,29 @@ As Dan, Zell and Santa had planned! </p>
 </body>
 
 <div>';
+
+$endHtmlnopostcard = '</p>
+</div>
+<a href="#footer" class="Arrow"></a>
+</timeline-text>
+
+ 
+</div>
+</timeline-section>
+</body>
+
+<div>';
+
 $footerHTML = '
 <footer class = "footer-basic" id="footer">
 <p>Artwork and postcard by Dan | Web design by <a href="https://www.bencobley.com/">Ben</a> | Web build by Zella and Tom</p>
+</footer>
+</div>
+</html>';
+
+$footerHTMLnopostcard = '
+<footer class = "footer-basic" id="footer">
+<p>Artwork by Dan | Web design by <a href="https://www.bencobley.com/">Ben</a> | Web build by Zella and Tom</p>
 </footer>
 </div>
 </html>';
@@ -112,13 +132,20 @@ if (($handle = fopen("/Users/zellaking/Downloads/Christmas card list 2022.xlsx -
     if ($data[13] != '' & $data[13] != 'Code') {
       echo "<$data[13]\n";
       $articleHtml .= trim($data[15]) . $headerHtml . trim($data[15]) .
-        $midHtml . trim($data[16]) . $endHtml;
+        $midHtml . trim($data[16]) ;
 
-      if ($data[18] == 'Y') {
-        $articleHtml .= $footerHTMLwithphotos;
+      if ($data[19] == 'Y') {
+        $articleHtml .= $endHtmlnopostcard . $footerHTMLnopostcard;
       } else {
-        $articleHtml .= $footerHTML;
+        $articleHtml .= $endHtml;
+        if ($data[18] == 'Y') {
+          $articleHtml .= $footerHTMLwithphotos;
+        } else {
+          $articleHtml .= $footerHTML;
+        }
       }
+
+
 
       // PHP needs permission to write to folder
       // Therefore let PHP attempt to create the folder
