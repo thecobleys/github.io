@@ -85,17 +85,33 @@ As Dan, Zell and Santa had planned! </p>
 
 <div>';
 
-$endHtmlnopostcard = '</p>
+$endHtmlnopostcard = "</p>
 </div>
-<a href="#footer" class="Arrow"></a>
+<a href='#timeline-section2' class='Arrow'></a>
+</timeline-text>
+<!-- </timeline-homepage>  -->
+</timeline-section>
+
+<timeline-section id='timeline-section2'>
+<div >
+<img style='width:100%;' src='img/santa_vertical.jpg' />
+<timeline-text class='centered'><p>With the posties delaying the mail</p><p>
+Here's a message that surely can't fail</p><p>
+To share good festive cheer  </p><p>
+And a happy new year</p><p>
+So the geeks of <a href = 'https://the-ding.org.uk/wiki/Main_Page'>the'Ding</a> can prevail!</p>
+<a href='#footer' class='Arrow'></a>
 </timeline-text>
 
  
 </div>
+
+
+
 </timeline-section>
 </body>
 
-<div>';
+<div>";
 
 $footerHTML = '
 <footer class = "footer-basic" id="footer">
