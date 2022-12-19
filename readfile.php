@@ -127,6 +127,15 @@ $footerHTMLnopostcard = '
 </div>
 </html>';
 
+$footerHTMLnopostcardwithphotos = '
+<footer class = "footer-basic" id="footer">
+<p> <a href="https://photos.app.goo.gl/bRdEwLxDMwxv8vNA6">A year in pictures - 2022</a></p>
+
+<p>Artwork by Dan | Web design by <a href="https://www.bencobley.com/">Ben</a> | Web build by Zella and Tom</p>
+</footer>
+</div>
+</html>';
+
 $footerHTMLwithphotos = '
 <footer class = "footer-basic" id="footer">
 <p> <a href="https://photos.app.goo.gl/bRdEwLxDMwxv8vNA6">A year in pictures - 2022</a></p>
@@ -151,7 +160,13 @@ if (($handle = fopen("/Users/zellaking/Downloads/Christmas card list 2022.xlsx -
         $midHtml . trim($data[16]) ;
 
       if ($data[19] == 'Y') {
-        $articleHtml .= $endHtmlnopostcard . $footerHTMLnopostcard;
+        $articleHtml .= $endHtmlnopostcard;
+        if ($data[18] == 'Y') {
+          $articleHtml .= $footerHTMLnopostcardwithphotos;
+        } else {
+          $articleHtml .= $footerHTMLnopostcard;
+          ;
+        }
       } else {
         $articleHtml .= $endHtml;
         if ($data[18] == 'Y') {
